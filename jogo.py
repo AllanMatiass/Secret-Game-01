@@ -28,12 +28,13 @@ print('Aperte "Enter" para continuar...')
 input()
 
 os.system('cls')
-
+print(aleatorio)
 # Início do jogo
 while continuar == 1:
 
     chutes = 10
     while chutes > 0 and not acertou:
+
         print(f"Você tem {chutes} tentativas restantes.")
 
         # Definindo variáveis default
@@ -65,6 +66,7 @@ while continuar == 1:
         if resposta == str_aleatorio:
             os.system('cls')
             print(f'Parabéns! Você acertou restando {chutes} tentativas!')
+            print(f'O código era: {aleatorio}')
             acertou = True
 
         else:
@@ -82,6 +84,7 @@ while continuar == 1:
                         dica = 'DICA: O primeiro dígito é menor que 5'
 
                     dica_apresentada = True
+                    os.system('cls')
                     print(dica)
 
             else:
@@ -102,6 +105,7 @@ while continuar == 1:
                         dica = 'DICA: O segundo dígito é menor que 5'
 
                     dica_apresentada = True
+                    os.system('cls')
                     print(dica)
             else:
                 tentativa += f'{n2}'
@@ -120,6 +124,7 @@ while continuar == 1:
                         dica = 'DICA: O terceiro dígito é menor que 5'
 
                     dica_apresentada = True
+                    os.system('cls')
                     print(dica)
             else:
                 tentativa += f'{n3}'
@@ -138,19 +143,21 @@ while continuar == 1:
                         dica = 'DICA: O quarto dígito é menor que 5'
 
                     dica_apresentada = True
+                    os.system('cls')
                     print(dica)
             else:
                 tentativa += f'{n4}'
                 certos += 1
 
-            os.system('cls')
             print(f'Seu código: {tentativa}')
             print(f'Há {certos} números na posição certa')
             print(f'Há {errados} números na posição errada')
 
             if n > 9999 or n < 1000:
                 os.system('cls')
-                chutes += 1
+                if chutes < 10:
+                    chutes += 1
+
                 print('Impossível realizar operação, '
                       'digite um número entre 1000 e 9999')
 
