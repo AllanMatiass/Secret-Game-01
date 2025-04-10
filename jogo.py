@@ -48,6 +48,7 @@ while continuar == 1:
             os.system('cls')
             if chutes < 10:
                 chutes += 1
+                
             print('Impossível realizar operação,'
                   ' digite um número entre 1000 e 9999')
             input('Aperte Enter para tentar novamente...')
