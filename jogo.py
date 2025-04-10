@@ -1,10 +1,8 @@
 import random
 import os
 
-# Limpar o terminal
 os.system('cls')
 
-# Gerar número aleatório
 aleatorio = random.randint(1000, 9999)
 str_aleatorio = f'{aleatorio}'
 
@@ -18,7 +16,6 @@ d4 = atualizado % 10
 continuar = 1
 acertou = False
 
-# Tela inicial
 print("*********************************")
 print("*       Jogo de Adivinhação     *")
 print("*     Tente acertar o número    *")
@@ -29,7 +26,6 @@ input()
 
 os.system('cls')
 
-# Início do jogo
 while continuar == 1:
     digito_correto_1 = ''
     digito_correto_2 = ''
@@ -58,7 +54,6 @@ while continuar == 1:
             os.system('cls')
 
         else:
-            # Separando os dígitos
             n1 = n // 1000
             n_atualizado = n % 1000
             n2 = n_atualizado // 100
@@ -73,7 +68,6 @@ while continuar == 1:
                 acertou = True
 
             else:
-                # Dígito 1
                 if n1 == d1:
                     if digito_correto_1 != f'{d1}':
                         digito_correto_1 = f'{n1}'
@@ -100,7 +94,6 @@ while continuar == 1:
                     if n1 == d2 or n1 == d3 or n1 == d4:
                         errados += 1
 
-                # Dígito 2
                 if n2 == d2:
                     if digito_correto_2 != f'{d2}':
                         digito_correto_2 = f'{n2}'
@@ -127,7 +120,6 @@ while continuar == 1:
                     if n2 == d1 or n2 == d3 or n2 == d4:
                         errados += 1
 
-                # Dígito 3
                 if n3 == d3:
                     if digito_correto_3 != f'{d3}':
                         digito_correto_3 = f'{n3}'
@@ -154,7 +146,6 @@ while continuar == 1:
                     if n3 == d1 or n3 == d2 or n3 == d4:
                         errados += 1
 
-                # Dígito 4
                 if n4 == d4:
                     if digito_correto_4 != f'{d4}':
                         digito_correto_4 = f'{n4}'
